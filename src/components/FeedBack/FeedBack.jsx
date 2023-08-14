@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+
+import PropTypes from 'prop-types';
+
 import FeedbackOptions from "../FeedbackOptions/FeedbackOptions";
-// import s from "./FeedBack.module.css";
+
 import { Container } from "./FeedBack.Styled";
+
 import Statistics from "../Statistics/Statistics";
+
 import Section from "../Section/Section";
 
 import { FEEDBACK_OPTIONS } from "../Options/Option";
@@ -60,5 +65,11 @@ class FeedBack extends Component {
     );
   }
 }
+
+FeedBack.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+};
 
 export default FeedBack;
